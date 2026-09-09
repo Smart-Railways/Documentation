@@ -34,19 +34,19 @@ export function CodeBlock({
 
   return (
     <div
-      className={`group my-4 rounded-xl border border-brand-border/80 bg-brand-secondary text-slate-100 overflow-hidden shadow-sm ${className}`}
+      className={`group my-4 rounded-xl border border-brand-border/80 bg-brand-secondary text-slate-100 overflow-hidden shadow-sm w-full max-w-full min-w-0 ${className}`}
     >
-      <div className="flex items-center justify-between px-4 py-2 border-b border-white/10 bg-black/30 text-xs font-mono text-slate-400">
-        <div className="flex items-center gap-2">
-          <div className="flex items-center gap-1.5 mr-2">
-            <span className="w-2.5 h-2.5 rounded-full bg-rose-500/80 inline-block" />
-            <span className="w-2.5 h-2.5 rounded-full bg-amber-500/80 inline-block" />
-            <span className="w-2.5 h-2.5 rounded-full bg-emerald-500/80 inline-block" />
+      <div className="flex items-center justify-between px-3 sm:px-4 py-2 border-b border-white/10 bg-black/30 text-xs font-mono text-slate-400 min-w-0">
+        <div className="flex items-center gap-2 min-w-0">
+          <div className="flex items-center gap-1.5 mr-1 sm:mr-2 shrink-0">
+            <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-rose-500/80 inline-block" />
+            <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-amber-500/80 inline-block" />
+            <span className="w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full bg-emerald-500/80 inline-block" />
           </div>
           {title ? (
-            <span className="text-slate-200 font-medium">{title}</span>
+            <span className="text-slate-200 font-medium truncate text-[11px] sm:text-xs">{title}</span>
           ) : (
-            <span className="uppercase text-slate-400 font-semibold tracking-wider text-[11px]">
+            <span className="uppercase text-slate-400 font-semibold tracking-wider text-[10px] sm:text-[11px]">
               {language}
             </span>
           )}
@@ -55,7 +55,7 @@ export function CodeBlock({
           onClick={handleCopy}
           type="button"
           aria-label="Copy code to clipboard"
-          className="flex items-center gap-1.5 rounded-md px-2.5 py-1 text-xs text-slate-300 hover:text-white hover:bg-white/10 transition-all cursor-pointer"
+          className="flex items-center gap-1.5 rounded-md px-2 py-0.5 sm:px-2.5 sm:py-1 text-xs text-slate-300 hover:text-white hover:bg-white/10 transition-all cursor-pointer shrink-0"
         >
           {copied ? (
             <>
@@ -71,7 +71,7 @@ export function CodeBlock({
         </button>
       </div>
 
-      <div className="overflow-x-auto p-4 font-mono text-[13.5px] leading-relaxed select-text">
+      <div className="w-full max-w-full min-w-0 overflow-x-auto p-3 sm:p-4 font-mono text-xs sm:text-[13.5px] leading-relaxed select-text scrollbar-thin">
         <pre className="text-slate-200">
           {showLineNumbers ? (
             <code>

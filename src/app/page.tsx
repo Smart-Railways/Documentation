@@ -25,15 +25,15 @@ import { CorridorMapVisual } from "./components/visuals/CorridorMapVisual";
 
 export default function HomePage() {
   return (
-    <div className="flex min-h-screen flex-col bg-brand-tertiary">
+    <div className="flex min-h-screen flex-col bg-brand-tertiary w-full max-w-full overflow-x-hidden min-w-0">
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative overflow-hidden border-b border-brand-border bg-gradient-to-b from-brand-surface via-brand-surface to-brand-tertiary/60 py-10 sm:py-16 lg:py-20">
-        <div className="mx-auto max-w-7xl px-3.5 sm:px-6 lg:px-8">
-          <div className="flex flex-col items-center text-center space-y-4 sm:space-y-6 max-w-4xl mx-auto">
+      <section className="relative overflow-hidden border-b border-brand-border bg-gradient-to-b from-brand-surface via-brand-surface to-brand-tertiary/60 py-8 sm:py-16 lg:py-20 w-full max-w-full">
+        <div className="mx-auto max-w-7xl px-3.5 sm:px-6 lg:px-8 w-full min-w-0">
+          <div className="flex flex-col items-center text-center space-y-4 sm:space-y-6 max-w-4xl mx-auto min-w-0">
             {/* Official Logo Emblem */}
-            <div className="relative h-16 w-16 sm:h-20 sm:w-20 rounded-2xl overflow-hidden border-2 border-brand-border bg-white shadow-md p-1">
+            <div className="relative h-14 w-14 sm:h-20 sm:w-20 rounded-2xl overflow-hidden border-2 border-brand-border bg-white shadow-md p-1 shrink-0">
               <Image
                 src="/logo.png"
                 alt="Sanket Official Logo"
@@ -44,20 +44,20 @@ export default function HomePage() {
               />
             </div>
 
-            <div className="inline-flex items-center gap-2 rounded-full border border-brand-border bg-white px-3 py-1 text-xs font-semibold text-brand-secondary shadow-2xs max-w-full">
+            <div className="inline-flex items-center gap-1.5 sm:gap-2 rounded-full border border-brand-border bg-white px-2.5 py-1 text-xs font-semibold text-brand-secondary shadow-2xs max-w-full min-w-0">
               <span className="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse shrink-0" />
-              <span className="truncate font-bold text-brand-primary">Live Production Deployed:</span>
+              <span className="font-bold text-brand-primary shrink-0 text-[11px] sm:text-xs">Live Cockpit:</span>
               <a
                 href="https://sanket.aryanshrivastava.dev/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-brand-secondary underline hover:text-brand-primary truncate"
+                className="text-brand-secondary underline hover:text-brand-primary truncate min-w-0 text-[11px] sm:text-xs font-mono"
               >
                 sanket.aryanshrivastava.dev ↗
               </a>
             </div>
 
-            <h1 className="font-heading text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight text-brand-secondary leading-tight">
+            <h1 className="font-heading text-2xl sm:text-4xl lg:text-5xl font-black tracking-tight text-brand-secondary leading-tight break-words">
               AI-Powered Automatic Block Planning for{" "}
               <span className="text-brand-primary underline decoration-brand-blue-light decoration-4 underline-offset-4">
                 Indian Railways
@@ -170,15 +170,15 @@ export default function HomePage() {
       </section>
 
       {/* Main Documentation Sections */}
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
+      <section className="mx-auto max-w-7xl px-3.5 sm:px-6 lg:px-8 py-10 sm:py-16 w-full max-w-full min-w-0">
   
         {/* Corridor Digital Twin Showcase */}
-        <div id="corridor-map" className="mb-16">
-          <div className="mb-4">
-            <h2 className="text-2xl sm:text-3xl font-heading font-extrabold text-brand-secondary">
+        <div id="corridor-map" className="mb-12 sm:mb-16 w-full max-w-full min-w-0">
+          <div className="mb-4 min-w-0">
+            <h2 className="text-xl sm:text-3xl font-heading font-extrabold text-brand-secondary break-words">
               Corridor Digital Twin & Station Topology
             </h2>
-            <p className="text-sm text-brand-muted mt-1">
+            <p className="text-xs sm:text-sm text-brand-muted mt-1 break-words">
               Real-world corridor evidence with automatic alias resolution for historical Indian Railways station codes.
             </p>
           </div>
@@ -186,12 +186,12 @@ export default function HomePage() {
         </div>
 
         {/* 3 Core Architecture Pillars */}
-        <div className="mb-16">
-          <div className="mb-8">
-            <h2 className="text-2xl sm:text-3xl font-heading font-extrabold text-brand-secondary">
+        <div className="mb-12 sm:mb-16 w-full max-w-full min-w-0">
+          <div className="mb-6 sm:mb-8 min-w-0">
+            <h2 className="text-xl sm:text-3xl font-heading font-extrabold text-brand-secondary break-words">
               System Architecture & Documentation Portals
             </h2>
-            <p className="text-sm text-brand-muted mt-1">
+            <p className="text-xs sm:text-sm text-brand-muted mt-1 break-words">
               Select any of the three core sub-systems below to access complete technical guides, schemas, and configurations.
             </p>
           </div>
@@ -346,17 +346,17 @@ export default function HomePage() {
         </div>
 
         {/* Quickstart Walkthrough */}
-        <div id="quickstart" className="mb-16">
-          <div className="rounded-2xl border border-brand-border bg-brand-surface p-6 sm:p-8 shadow-xs">
+        <div id="quickstart" className="mb-12 sm:mb-16 w-full max-w-full min-w-0">
+          <div className="rounded-2xl border border-brand-border bg-brand-surface p-4 sm:p-8 shadow-xs w-full max-w-full min-w-0 overflow-hidden">
             <div className="flex items-center gap-2.5 mb-3">
-              <span className="p-2 rounded-lg bg-brand-primary/10 text-brand-primary">
+              <span className="p-2 rounded-lg bg-brand-primary/10 text-brand-primary shrink-0">
                 <TerminalIcon size={20} />
               </span>
-              <h2 className="text-2xl font-heading font-extrabold text-brand-secondary">
+              <h2 className="text-xl sm:text-2xl font-heading font-extrabold text-brand-secondary break-words">
                 5-Minute Quickstart: Running Locally
               </h2>
             </div>
-            <p className="text-sm text-brand-muted mb-6">
+            <p className="text-xs sm:text-sm text-brand-muted mb-6 break-words">
               Follow these three simple steps to start the complete platform on your workstation.
             </p>
 
@@ -436,29 +436,29 @@ python -c "from src.services.ml_engine import RailwayMLEngine; print(RailwayMLEn
         </div>
 
         {/* Empirical Proof: AI vs Baseline Comparison */}
-        <div id="benchmarks" className="mb-8">
-          <div className="rounded-2xl border border-brand-border bg-brand-surface p-6 sm:p-8 shadow-xs">
-            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-brand-border/80 pb-5 mb-6">
-              <div>
+        <div id="benchmarks" className="mb-8 w-full max-w-full min-w-0">
+          <div className="rounded-2xl border border-brand-border bg-brand-surface p-4 sm:p-8 shadow-xs w-full max-w-full min-w-0 overflow-hidden">
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 sm:gap-4 border-b border-brand-border/80 pb-5 mb-6">
+              <div className="min-w-0">
                 <div className="flex items-center gap-2">
-                  <span className="p-1.5 rounded-lg bg-emerald-100 text-emerald-800">
+                  <span className="p-1.5 rounded-lg bg-emerald-100 text-emerald-800 shrink-0">
                     <ActivityIcon size={20} />
                   </span>
-                  <h2 className="text-2xl font-heading font-extrabold text-brand-secondary">
+                  <h2 className="text-xl sm:text-2xl font-heading font-extrabold text-brand-secondary break-words">
                     Empirical Proof: AI Optimizer vs Traditional FIFO
                   </h2>
                 </div>
-                <p className="text-sm text-brand-muted mt-1">
+                <p className="text-xs sm:text-sm text-brand-muted mt-1 break-words">
                   Validated against Indian Railways corridor traffic simulations across 75 automated test suites.
                 </p>
               </div>
-              <Badge variant="surface" size="md">
+              <Badge variant="surface" size="md" className="self-start sm:self-auto shrink-0">
                 Verified Benchmark
               </Badge>
             </div>
 
-            <div className="overflow-x-auto -mx-2 px-2 sm:mx-0 sm:px-0">
-              <table className="w-full text-left border-collapse min-w-[600px]">
+            <div className="w-full max-w-full overflow-x-auto rounded-xl border border-brand-border/60 scrollbar-thin">
+              <table className="w-full text-left border-collapse min-w-[560px]">
                 <thead>
                   <tr className="border-b border-brand-border bg-brand-tertiary/60 text-xs font-bold text-brand-secondary">
                     <th className="py-2.5 px-3 sm:py-3 sm:px-4">Evaluation Metric</th>

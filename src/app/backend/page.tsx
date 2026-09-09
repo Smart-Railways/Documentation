@@ -560,44 +560,60 @@ export default function BackendDocsPage() {
           </h2>
         </div>
 
-        <div className="space-y-3 mb-6">
-          <div className="p-3.5 rounded-xl border border-brand-border bg-white flex flex-col sm:flex-row sm:items-center justify-between text-xs gap-2">
-            <div>
-              <span className="font-mono font-bold text-brand-secondary">apps.trains.tasks.sync_all_timetables</span>
-              <p className="text-brand-muted mt-0.5">Daily at 02:00 AM IST. Syncs full weekly timetables inside atomic transactions.</p>
+        <div className="space-y-3 mb-6 min-w-0">
+          <div className="p-3 sm:p-3.5 rounded-xl border border-brand-border bg-white flex flex-col sm:flex-row sm:items-center justify-between text-xs gap-2 min-w-0">
+            <div className="min-w-0">
+              <span className="font-mono font-bold text-brand-secondary break-all text-[11px] sm:text-xs">
+                apps.trains.tasks.sync_all_timetables
+              </span>
+              <p className="text-brand-muted mt-0.5 text-xs">Daily at 02:00 AM IST. Syncs full weekly timetables inside atomic transactions.</p>
             </div>
-            <Badge variant="neutral" size="sm">Crontab(0, 2)</Badge>
+            <Badge variant="neutral" size="sm" className="self-start sm:self-auto shrink-0">Crontab(0, 2)</Badge>
           </div>
 
-          <div className="p-3.5 rounded-xl border border-brand-border bg-white flex flex-col sm:flex-row sm:items-center justify-between text-xs gap-2">
-            <div>
-              <span className="font-mono font-bold text-brand-secondary">apps.trains.tasks.sync_relevant_live_trains</span>
-              <p className="text-brand-muted mt-0.5">Every 3 hours. Dispatches tracking tasks for up to 30 operating trains.</p>
+          <div className="p-3 sm:p-3.5 rounded-xl border border-brand-border bg-white flex flex-col sm:flex-row sm:items-center justify-between text-xs gap-2 min-w-0">
+            <div className="min-w-0">
+              <span className="font-mono font-bold text-brand-secondary break-all text-[11px] sm:text-xs">
+                apps.trains.tasks.sync_relevant_live_trains
+              </span>
+              <p className="text-brand-muted mt-0.5 text-xs">Every 3 hours. Dispatches tracking tasks for up to 30 operating trains.</p>
             </div>
-            <Badge variant="neutral" size="sm">Crontab(0, */3)</Badge>
+            <Badge variant="neutral" size="sm" className="self-start sm:self-auto shrink-0">Crontab(0, */3)</Badge>
           </div>
         </div>
 
-        <div className="rounded-xl border border-brand-border bg-brand-tertiary/40 p-4 text-xs sm:text-sm">
-          <h4 className="font-bold text-brand-secondary mb-2">
+        <div className="rounded-xl border border-brand-border bg-brand-tertiary/40 p-3.5 sm:p-4 text-xs sm:text-sm min-w-0">
+          <h4 className="font-bold text-brand-secondary mb-2.5">
             🛡️ Strict Quota Protection Features
           </h4>
-          <ul className="space-y-2 text-brand-muted">
-            <li className="flex items-center gap-2">
-              <CheckCircleIcon size={14} className="text-brand-primary shrink-0" />
-              <strong>Hard Quota Cap (30 Trains / Cycle)</strong>: Prioritizes up to 10 premium services (Vande Bharat, Shatabdi, Rajdhani, Tejas).
+          <ul className="space-y-2.5 text-brand-muted text-xs sm:text-sm">
+            <li className="flex items-start gap-2 min-w-0">
+              <CheckCircleIcon size={15} className="text-brand-primary shrink-0 mt-0.5" />
+              <div className="min-w-0 leading-relaxed">
+                <strong className="text-brand-secondary">Hard Quota Cap (30 Trains / Cycle):</strong>{" "}
+                <span>Prioritizes up to 10 premium services (Vande Bharat, Shatabdi, Rajdhani, Tejas).</span>
+              </div>
             </li>
-            <li className="flex items-center gap-2">
-              <CheckCircleIcon size={14} className="text-brand-primary shrink-0" />
-              <strong>Rate Limiting (15/m)</strong>: Throttles live-tracking calls to 15 per minute, preventing RailKit HTTP 429 errors.
+            <li className="flex items-start gap-2 min-w-0">
+              <CheckCircleIcon size={15} className="text-brand-primary shrink-0 mt-0.5" />
+              <div className="min-w-0 leading-relaxed">
+                <strong className="text-brand-secondary">Rate Limiting (15/m):</strong>{" "}
+                <span>Throttles live-tracking calls to 15 per minute, preventing RailKit HTTP 429 errors.</span>
+              </div>
             </li>
-            <li className="flex items-center gap-2">
-              <CheckCircleIcon size={14} className="text-brand-primary shrink-0" />
-              <strong>Active-Day Bitmask Pre-Filter</strong>: Checks train running masks before scheduling API queries.
+            <li className="flex items-start gap-2 min-w-0">
+              <CheckCircleIcon size={15} className="text-brand-primary shrink-0 mt-0.5" />
+              <div className="min-w-0 leading-relaxed">
+                <strong className="text-brand-secondary">Active-Day Bitmask Pre-Filter:</strong>{" "}
+                <span>Checks train running masks before scheduling API queries.</span>
+              </div>
             </li>
-            <li className="flex items-center gap-2">
-              <CheckCircleIcon size={14} className="text-brand-primary shrink-0" />
-              <strong>Graceful Skip Handling</strong>: Caught RailKit 400 responses are marked as SKIPPED rather than triggering failing retries.
+            <li className="flex items-start gap-2 min-w-0">
+              <CheckCircleIcon size={15} className="text-brand-primary shrink-0 mt-0.5" />
+              <div className="min-w-0 leading-relaxed">
+                <strong className="text-brand-secondary">Graceful Skip Handling:</strong>{" "}
+                <span>Caught RailKit 400 responses are marked as SKIPPED rather than triggering failing retries.</span>
+              </div>
             </li>
           </ul>
         </div>

@@ -33,23 +33,23 @@ export function CorridorMapVisual() {
   const [viewMode, setViewMode] = useState<"track" | "grid">("track");
 
   return (
-    <div className="rounded-2xl border border-brand-border bg-brand-surface p-4 sm:p-6 shadow-xs my-6 w-full max-w-full overflow-hidden">
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-brand-border/70 pb-4 mb-4">
-        <div>
+    <div className="rounded-2xl border border-brand-border bg-brand-surface p-3.5 sm:p-6 shadow-xs my-6 w-full max-w-full min-w-0 overflow-hidden">
+      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-brand-border/70 pb-4 mb-4 min-w-0">
+        <div className="min-w-0">
           <div className="flex items-center gap-2">
             <span className="p-1.5 rounded-lg bg-brand-primary/10 text-brand-primary shrink-0">
               <TrainIcon size={18} />
             </span>
-            <h3 className="text-base sm:text-lg font-bold text-brand-secondary">
+            <h3 className="text-base sm:text-lg font-bold text-brand-secondary break-words">
               Corridor Digital Twin: New Delhi – Mumbai (1,384 km)
             </h3>
           </div>
-          <p className="text-xs sm:text-sm text-brand-muted mt-1">
+          <p className="text-xs sm:text-sm text-brand-muted mt-1 break-words">
             Golden Quadrilateral Route • 10 Critical Junctions with Real Telemetry & Station Aliasing
           </p>
         </div>
 
-        <div className="flex items-center gap-2 self-start sm:self-auto">
+        <div className="flex items-center gap-2 self-start sm:self-auto shrink-0 flex-wrap">
           {/* View mode toggle */}
           <div className="flex rounded-lg border border-brand-border p-0.5 bg-brand-tertiary text-xs">
             <button
@@ -82,15 +82,15 @@ export function CorridorMapVisual() {
 
       {/* Track Line View */}
       {viewMode === "track" && (
-        <div className="relative">
-          <div className="sm:hidden flex items-center justify-between text-[11px] text-brand-muted mb-2 font-medium">
+        <div className="relative w-full max-w-full min-w-0 overflow-hidden">
+          <div className="sm:hidden flex items-center justify-between text-[11px] text-brand-muted mb-2 font-medium px-1">
             <span>Tap any station node to inspect</span>
             <span className="text-brand-primary font-bold">Swipe track ➔</span>
           </div>
 
-          <div className="relative overflow-x-auto pb-4 pt-2 -mx-4 px-4 sm:mx-0 sm:px-2 scrollbar-thin">
-            <div className="min-w-[700px] px-3">
-              <div className="relative flex items-center justify-between">
+          <div className="w-full max-w-full overflow-x-auto pb-4 pt-2 scrollbar-thin">
+            <div className="inline-flex min-w-[640px] w-full px-1">
+              <div className="relative flex items-center justify-between w-full">
                 {/* Connecting Railway Track Line */}
                 <div className="absolute left-3 right-3 top-4 h-1.5 bg-gradient-to-r from-brand-primary via-blue-500 to-indigo-600 rounded-full z-0 opacity-80" />
                 
@@ -168,14 +168,14 @@ export function CorridorMapVisual() {
       )}
 
       {/* Selected Station Details Card */}
-      <div className="mt-4 rounded-xl border border-brand-border/80 bg-brand-tertiary/60 p-3.5 sm:p-5 transition-all">
-        <div className="flex flex-col md:flex-row md:items-start justify-between gap-3 sm:gap-4">
+      <div className="mt-4 rounded-xl border border-brand-border/80 bg-brand-tertiary/60 p-3 sm:p-5 transition-all w-full min-w-0 overflow-hidden">
+        <div className="flex flex-col md:flex-row md:items-start justify-between gap-3 sm:gap-4 min-w-0">
           <div className="space-y-1.5 flex-1 min-w-0">
-            <div className="flex flex-wrap items-center gap-2">
-              <span className="font-mono text-lg sm:text-xl font-extrabold text-brand-primary">
+            <div className="flex flex-wrap items-center gap-2 min-w-0">
+              <span className="font-mono text-base sm:text-xl font-extrabold text-brand-primary shrink-0">
                 [{selectedStation.code}]
               </span>
-              <h4 className="text-base sm:text-lg font-bold text-brand-secondary">
+              <h4 className="text-sm sm:text-lg font-bold text-brand-secondary break-words">
                 {selectedStation.name}
               </h4>
               {selectedStation.alias && (
@@ -184,15 +184,15 @@ export function CorridorMapVisual() {
                 </Badge>
               )}
             </div>
-            <p className="text-[11px] sm:text-xs text-brand-muted font-medium">
+            <p className="text-[11px] sm:text-xs text-brand-muted font-medium break-words">
               {selectedStation.division} • Cumulative Distance: <strong className="text-brand-secondary">{selectedStation.distanceKm} km</strong> from NDLS
             </p>
-            <p className="text-xs sm:text-sm text-brand-secondary/90 leading-relaxed pt-1">
+            <p className="text-xs sm:text-sm text-brand-secondary/90 leading-relaxed pt-1 break-words">
               {selectedStation.highlight}
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-1 gap-2 shrink-0 text-xs">
+          <div className="grid grid-cols-2 md:grid-cols-1 gap-2 shrink-0 text-xs w-full sm:w-auto">
             <div className="rounded-lg bg-white p-2 sm:p-2.5 border border-brand-border/60">
               <span className="text-brand-muted block text-[10px] sm:text-[11px]">Permissible Speed</span>
               <span className="font-semibold text-brand-secondary text-xs sm:text-sm">
@@ -201,7 +201,7 @@ export function CorridorMapVisual() {
             </div>
             <div className="rounded-lg bg-white p-2 sm:p-2.5 border border-brand-border/60">
               <span className="text-brand-muted block text-[10px] sm:text-[11px]">Track Infrastructure</span>
-              <span className="font-semibold text-brand-secondary text-xs sm:text-sm line-clamp-1">
+              <span className="font-semibold text-brand-secondary text-xs sm:text-sm line-clamp-2">
                 {selectedStation.tracks}
               </span>
             </div>

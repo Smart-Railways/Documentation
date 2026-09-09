@@ -84,20 +84,20 @@ export default function FrontendDocsPage() {
           </div>
           <div>
             <div className="flex items-center gap-2">
-              <span className="text-xs font-bold text-emerald-700 uppercase tracking-wider flex items-center gap-1">
+              <span className="text-xs font-bold text-emerald-700 tracking-wider flex items-center gap-1">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                 Live Deployed Production Cockpit
               </span>
               <Badge variant="surface" size="sm">Online</Badge>
             </div>
-            <a
-              href="https://sanket.aryanshrivastava.dev/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm sm:text-base font-extrabold text-brand-secondary hover:text-brand-primary font-mono"
-            >
-              https://sanket.aryanshrivastava.dev/
-            </a>
+           <a
+  href="https://sanket.aryanshrivastava.dev/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-sm sm:text-base font-extrabold break-all text-brand-secondary hover:text-brand-primary font-mono"
+>
+  https://sanket.aryanshrivastava.dev/
+</a>
           </div>
         </div>
 
@@ -113,12 +113,12 @@ export default function FrontendDocsPage() {
       </div>
 
       {/* Overview Section */}
-      <section id="overview" className="rounded-2xl border border-brand-border bg-brand-surface p-6 sm:p-8 shadow-xs">
+      <section id="overview" className="rounded-2xl border border-brand-border bg-brand-surface p-4 sm:p-8 shadow-xs w-full max-w-full min-w-0">
         <div className="flex items-center gap-2 mb-3">
-          <span className="p-1.5 rounded-lg bg-blue-50 text-brand-primary border border-brand-primary/20">
+          <span className="p-1.5 rounded-lg bg-blue-50 text-brand-primary border border-brand-primary/20 shrink-0">
             <LayersIcon size={20} />
           </span>
-          <h2 className="text-xl sm:text-2xl font-heading font-extrabold text-brand-secondary">
+          <h2 className="text-lg sm:text-2xl font-heading font-extrabold text-brand-secondary break-words">
             System Overview & Cockpit Architecture
           </h2>
         </div>
@@ -129,8 +129,8 @@ export default function FrontendDocsPage() {
           The frontend bridges real-time timetable operations, infrastructure condition monitoring, and intelligent corridor block allocation to <strong>minimize train delays while ensuring timely, safe maintenance</strong>.
         </p>
 
-        <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <div className="rounded-xl border border-brand-border/80 bg-brand-tertiary/60 p-4">
+        <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
+          <div className="rounded-xl border border-brand-border/80 bg-brand-tertiary/60 p-3.5 sm:p-4">
             <h4 className="font-bold text-xs uppercase tracking-wider text-brand-secondary mb-1">
               Mission-Critical UI
             </h4>
@@ -138,7 +138,7 @@ export default function FrontendDocsPage() {
               High-contrast status pills, dark cockpit theme option, and zero clutter for 24/7 operations control centers.
             </p>
           </div>
-          <div className="rounded-xl border border-brand-border/80 bg-brand-tertiary/60 p-4">
+          <div className="rounded-xl border border-brand-border/80 bg-brand-tertiary/60 p-3.5 sm:p-4">
             <h4 className="font-bold text-xs uppercase tracking-wider text-brand-secondary mb-1">
               Optimistic Updates
             </h4>
@@ -146,7 +146,7 @@ export default function FrontendDocsPage() {
               TanStack Query v5 ensures instant UI feedback on asset edits, defect reporting, and slot reservations.
             </p>
           </div>
-          <div className="rounded-xl border border-brand-border/80 bg-brand-tertiary/60 p-4">
+          <div className="rounded-xl border border-brand-border/80 bg-brand-tertiary/60 p-3.5 sm:p-4">
             <h4 className="font-bold text-xs uppercase tracking-wider text-brand-secondary mb-1">
               Zero ML Latency
             </h4>
@@ -158,12 +158,12 @@ export default function FrontendDocsPage() {
       </section>
 
       {/* Tech Stack Table */}
-      <section id="tech-stack" className="rounded-2xl border border-brand-border bg-brand-surface p-6 sm:p-8 shadow-xs">
-        <h2 className="text-xl sm:text-2xl font-heading font-extrabold text-brand-secondary mb-4">
+      <section id="tech-stack" className="rounded-2xl border border-brand-border bg-brand-surface p-4 sm:p-8 shadow-xs w-full max-w-full min-w-0">
+        <h2 className="text-lg sm:text-2xl font-heading font-extrabold text-brand-secondary mb-4 break-words">
           Technology Stack
         </h2>
-        <div className="overflow-x-auto rounded-xl border border-brand-border">
-          <table className="w-full text-left border-collapse">
+        <div className="w-full max-w-full overflow-x-auto rounded-xl border border-brand-border scrollbar-thin">
+          <table className="w-full text-left border-collapse min-w-[540px]">
             <thead>
               <tr className="border-b border-brand-border bg-brand-tertiary/60 text-xs font-bold text-brand-secondary">
                 <th className="py-3 px-4">Layer</th>
@@ -208,8 +208,8 @@ export default function FrontendDocsPage() {
       </section>
 
       {/* Directory Layout */}
-      <section id="directory" className="rounded-2xl border border-brand-border bg-brand-surface p-6 sm:p-8 shadow-xs">
-        <h2 className="text-xl sm:text-2xl font-heading font-extrabold text-brand-secondary mb-2">
+      <section id="directory" className="rounded-2xl border border-brand-border bg-brand-surface p-4 sm:p-8 shadow-xs w-full max-w-full min-w-0">
+        <h2 className="text-lg sm:text-2xl font-heading font-extrabold text-brand-secondary mb-2 break-words">
           Project Directory Structure
         </h2>
         <p className="text-xs sm:text-sm text-brand-muted mb-4">
@@ -253,17 +253,17 @@ export default function FrontendDocsPage() {
       </section>
 
       {/* Module 1: GIS Map */}
-      <section id="gis-map" className="rounded-2xl border border-brand-border bg-brand-surface p-6 sm:p-8 shadow-xs">
-        <div className="flex items-center justify-between gap-4 mb-4">
-          <div className="flex items-center gap-2.5">
-            <span className="p-1.5 rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-300">
+      <section id="gis-map" className="rounded-2xl border border-brand-border bg-brand-surface p-4 sm:p-8 shadow-xs w-full max-w-full min-w-0">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 sm:gap-4 mb-4 min-w-0">
+          <div className="flex items-start sm:items-center gap-2.5 min-w-0">
+            <span className="p-1.5 rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-300 shrink-0 mt-0.5 sm:mt-0">
               <CompassIcon size={20} />
             </span>
-            <h2 className="text-xl sm:text-2xl font-heading font-extrabold text-brand-secondary">
+            <h2 className="text-lg sm:text-2xl font-heading font-extrabold text-brand-secondary break-words">
               1. 🗺️ Corridor GIS & Real-Time Railway Map
             </h2>
           </div>
-          <Badge variant="success" size="md">
+          <Badge variant="success" size="md" className="self-start sm:self-auto shrink-0">
             Interactive GIS
           </Badge>
         </div>
@@ -273,7 +273,7 @@ export default function FrontendDocsPage() {
         </p>
 
         <div className="space-y-3 text-xs sm:text-sm">
-          <div className="p-4 rounded-xl border border-brand-border bg-brand-tertiary/40">
+          <div className="p-3.5 sm:p-4 rounded-xl border border-brand-border bg-brand-tertiary/40">
             <h4 className="font-bold text-brand-secondary mb-1">
               Corridor & Section Dynamic Selector
             </h4>
@@ -282,7 +282,7 @@ export default function FrontendDocsPage() {
             </p>
           </div>
 
-          <div className="p-4 rounded-xl border border-brand-border bg-brand-tertiary/40">
+          <div className="p-3.5 sm:p-4 rounded-xl border border-brand-border bg-brand-tertiary/40">
             <h4 className="font-bold text-brand-secondary mb-1">
               Visual Corridor Track Occupancy
             </h4>
@@ -291,14 +291,14 @@ export default function FrontendDocsPage() {
             </p>
           </div>
 
-          <div className="p-4 rounded-xl border border-brand-border bg-brand-tertiary/40">
+          <div className="p-3.5 sm:p-4 rounded-xl border border-brand-border bg-brand-tertiary/40 min-w-0">
             <h4 className="font-bold text-brand-secondary mb-1">
               Dark Mode CartoDB Tile Layer
             </h4>
             <p className="text-brand-muted">
               Default tile provider is configured to CartoDB Dark Matter for crisp readability in dim control room environments:
             </p>
-            <div className="mt-2 font-mono text-xs text-brand-secondary bg-white p-2 rounded border border-brand-border">
+            <div className="mt-2 font-mono text-[11px] sm:text-xs text-brand-secondary bg-white p-2 sm:p-2.5 rounded border border-brand-border break-all select-all overflow-hidden">
               https://&#123;s&#125;.basemaps.cartocdn.com/dark_all/&#123;z&#125;/&#123;x&#125;/&#123;y&#125;&#123;r&#125;.png
             </div>
           </div>
@@ -306,17 +306,17 @@ export default function FrontendDocsPage() {
       </section>
 
       {/* Module 2: Trains */}
-      <section id="trains" className="rounded-2xl border border-brand-border bg-brand-surface p-6 sm:p-8 shadow-xs">
-        <div className="flex items-center justify-between gap-4 mb-4">
-          <div className="flex items-center gap-2.5">
-            <span className="p-1.5 rounded-lg bg-blue-50 text-brand-primary border border-brand-primary/20">
+      <section id="trains" className="rounded-2xl border border-brand-border bg-brand-surface p-4 sm:p-8 shadow-xs w-full max-w-full min-w-0">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 sm:gap-4 mb-4 min-w-0">
+          <div className="flex items-start sm:items-center gap-2.5 min-w-0">
+            <span className="p-1.5 rounded-lg bg-blue-50 text-brand-primary border border-brand-primary/20 shrink-0 mt-0.5 sm:mt-0">
               <TrainIcon size={20} />
             </span>
-            <h2 className="text-xl sm:text-2xl font-heading font-extrabold text-brand-secondary">
+            <h2 className="text-lg sm:text-2xl font-heading font-extrabold text-brand-secondary break-words">
               2. 🚆 Train Operations & Traffic Management (/trains)
             </h2>
           </div>
-          <Badge variant="surface" size="md">
+          <Badge variant="surface" size="md" className="self-start sm:self-auto shrink-0">
             Traffic Control
           </Badge>
         </div>
@@ -326,7 +326,7 @@ export default function FrontendDocsPage() {
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4 text-xs sm:text-sm">
-          <div className="p-4 rounded-xl border border-brand-border bg-brand-tertiary/40">
+          <div className="p-3.5 sm:p-4 rounded-xl border border-brand-border bg-brand-tertiary/40">
             <h4 className="font-bold text-brand-secondary mb-1">
               Multi-Category Fleet Support
             </h4>
@@ -349,7 +349,7 @@ export default function FrontendDocsPage() {
             </div>
           </div>
 
-          <div className="p-4 rounded-xl border border-brand-border bg-brand-tertiary/40">
+          <div className="p-3.5 sm:p-4 rounded-xl border border-brand-border bg-brand-tertiary/40">
             <h4 className="font-bold text-brand-secondary mb-1">
               Live Movement Tracking & Delays
             </h4>
@@ -361,17 +361,17 @@ export default function FrontendDocsPage() {
       </section>
 
       {/* Module 3: Assets */}
-      <section id="assets" className="rounded-2xl border border-brand-border bg-brand-surface p-6 sm:p-8 shadow-xs">
-        <div className="flex items-center justify-between gap-4 mb-4">
-          <div className="flex items-center gap-2.5">
-            <span className="p-1.5 rounded-lg bg-amber-50 text-amber-800 border border-amber-200">
+      <section id="assets" className="rounded-2xl border border-brand-border bg-brand-surface p-4 sm:p-8 shadow-xs w-full max-w-full min-w-0">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 sm:gap-4 mb-4 min-w-0">
+          <div className="flex items-start sm:items-center gap-2.5 min-w-0">
+            <span className="p-1.5 rounded-lg bg-amber-50 text-amber-800 border border-amber-200 shrink-0 mt-0.5 sm:mt-0">
               <ActivityIcon size={20} />
             </span>
-            <h2 className="text-xl sm:text-2xl font-heading font-extrabold text-brand-secondary">
+            <h2 className="text-lg sm:text-2xl font-heading font-extrabold text-brand-secondary break-words">
               3. 🏗️ Infrastructure Asset Management (/assets)
             </h2>
           </div>
-          <Badge variant="warning" size="md">
+          <Badge variant="warning" size="md" className="self-start sm:self-auto shrink-0">
             Asset Health
           </Badge>
         </div>
@@ -380,8 +380,8 @@ export default function FrontendDocsPage() {
           The <code className="font-mono text-brand-primary">/assets</code> cockpit provides comprehensive inspection and lifecycle tracking across Indian Railways' three primary infrastructure departments:
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs sm:text-sm">
-          <div className="p-4 rounded-xl border border-brand-border bg-brand-tertiary/40">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4 text-xs sm:text-sm">
+          <div className="p-3.5 sm:p-4 rounded-xl border border-brand-border bg-brand-tertiary/40">
             <Badge variant="primary" size="sm" className="mb-2">
               ENGINEERING (Civil)
             </Badge>
@@ -390,7 +390,7 @@ export default function FrontendDocsPage() {
             </p>
           </div>
 
-          <div className="p-4 rounded-xl border border-brand-border bg-brand-tertiary/40">
+          <div className="p-3.5 sm:p-4 rounded-xl border border-brand-border bg-brand-tertiary/40">
             <Badge variant="put" size="sm" className="mb-2">
               S&T (Signal & Telecom)
             </Badge>
@@ -399,7 +399,7 @@ export default function FrontendDocsPage() {
             </p>
           </div>
 
-          <div className="p-4 rounded-xl border border-brand-border bg-brand-tertiary/40">
+          <div className="p-3.5 sm:p-4 rounded-xl border border-brand-border bg-brand-tertiary/40">
             <Badge variant="patch" size="sm" className="mb-2">
               TRACTION (TRD / OHE)
             </Badge>
@@ -411,17 +411,17 @@ export default function FrontendDocsPage() {
       </section>
 
       {/* Module 4: Maintenance Cockpit */}
-      <section id="maintenance" className="rounded-2xl border border-brand-border bg-brand-surface p-6 sm:p-8 shadow-xs">
-        <div className="flex items-center justify-between gap-4 mb-4">
-          <div className="flex items-center gap-2.5">
-            <span className="p-1.5 rounded-lg bg-purple-50 text-purple-700 border border-purple-300">
+      <section id="maintenance" className="rounded-2xl border border-brand-border bg-brand-surface p-4 sm:p-8 shadow-xs w-full max-w-full min-w-0">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 sm:gap-4 mb-4 min-w-0">
+          <div className="flex items-start sm:items-center gap-2.5 min-w-0">
+            <span className="p-1.5 rounded-lg bg-purple-50 text-purple-700 border border-purple-300 shrink-0 mt-0.5 sm:mt-0">
               <ShieldIcon size={20} />
             </span>
-            <h2 className="text-xl sm:text-2xl font-heading font-extrabold text-brand-secondary">
+            <h2 className="text-lg sm:text-2xl font-heading font-extrabold text-brand-secondary break-words">
               4. 🛠️ Intelligent Maintenance & Block Planning (/maintenance)
             </h2>
           </div>
-          <Badge variant="surface" size="md">
+          <Badge variant="surface" size="md" className="self-start sm:self-auto shrink-0">
             Block Optimization
           </Badge>
         </div>
@@ -471,15 +471,15 @@ const handleApplyRecommendation = async (blockWindowId: number) => {
       </section>
 
       {/* Bitmask Pattern */}
-      <section id="bitmask" className="rounded-2xl border border-brand-border bg-brand-surface p-6 sm:p-8 shadow-xs">
-        <h2 className="text-xl sm:text-2xl font-heading font-extrabold text-brand-secondary mb-3">
+      <section id="bitmask" className="rounded-2xl border border-brand-border bg-brand-surface p-4 sm:p-8 shadow-xs w-full max-w-full min-w-0">
+        <h2 className="text-lg sm:text-2xl font-heading font-extrabold text-brand-secondary mb-3 break-words">
           7-Day Running Days Bitmask Formulation
         </h2>
-        <p className="text-xs sm:text-sm text-brand-muted mb-4">
+        <p className="text-xs sm:text-sm text-brand-muted mb-4 break-words">
           Indian Railways train timetables are encoded using a 7-character binary mask representing <strong>Monday through Sunday</strong>:
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 font-mono text-xs">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 sm:gap-3 font-mono text-xs">
           <div className="p-3 rounded-lg border border-brand-border bg-white flex justify-between items-center">
             <span><code>"1111111"</code>: Daily (Mon–Sun)</span>
             <Badge variant="surface" size="sm">DAILY</Badge>
@@ -500,11 +500,11 @@ const handleApplyRecommendation = async (blockWindowId: number) => {
       </section>
 
       {/* Hydration Safety */}
-      <section id="hydration" className="rounded-2xl border border-brand-border bg-brand-surface p-6 sm:p-8 shadow-xs">
-        <h2 className="text-xl sm:text-2xl font-heading font-extrabold text-brand-secondary mb-3">
+      <section id="hydration" className="rounded-2xl border border-brand-border bg-brand-surface p-4 sm:p-8 shadow-xs w-full max-w-full min-w-0">
+        <h2 className="text-lg sm:text-2xl font-heading font-extrabold text-brand-secondary mb-3 break-words">
           Hydration Safety & Mobile Overlay Isolation
         </h2>
-        <p className="text-xs sm:text-sm text-brand-muted mb-4 leading-relaxed">
+        <p className="text-xs sm:text-sm text-brand-muted mb-4 leading-relaxed break-words">
           Leaflet relies on browser APIs (<code className="font-mono text-brand-primary">window</code>, <code className="font-mono text-brand-primary">document</code>) that are unavailable during Next.js server-side rendering (SSR). To eliminate hydration errors:
         </p>
 
@@ -524,7 +524,7 @@ export const RailwayCorridorMap = dynamic(
             title="components/map/RailwayCorridorMap.tsx"
           />
 
-          <div className="p-4 rounded-xl border border-brand-border bg-brand-tertiary/40 text-xs sm:text-sm">
+          <div className="p-3.5 sm:p-4 rounded-xl border border-brand-border bg-brand-tertiary/40 text-xs sm:text-sm">
             <h4 className="font-bold text-brand-secondary mb-1">
               Backdrop-Filter Stacking Context Fix
             </h4>
@@ -543,12 +543,12 @@ export const RailwayCorridorMap = dynamic(
       </section>
 
       {/* Setup & Local Development */}
-      <section id="setup" className="rounded-2xl border border-brand-border bg-brand-surface p-6 sm:p-8 shadow-xs">
+      <section id="setup" className="rounded-2xl border border-brand-border bg-brand-surface p-4 sm:p-8 shadow-xs w-full max-w-full min-w-0">
         <div className="flex items-center gap-2 mb-3">
-          <span className="p-1.5 rounded-lg bg-brand-primary/10 text-brand-primary">
+          <span className="p-1.5 rounded-lg bg-brand-primary/10 text-brand-primary shrink-0">
             <TerminalIcon size={20} />
           </span>
-          <h2 className="text-xl sm:text-2xl font-heading font-extrabold text-brand-secondary">
+          <h2 className="text-lg sm:text-2xl font-heading font-extrabold text-brand-secondary break-words">
             Installation & Environment Configuration
           </h2>
         </div>
